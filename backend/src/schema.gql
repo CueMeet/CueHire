@@ -1,0 +1,286 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AddMemberResult {
+  email: String!
+  error: String
+  member: OrganizationMember
+  success: Boolean!
+}
+
+input AddTeamMemberInput {
+  email: String!
+  organizationId: String!
+  role: String
+}
+
+input CreateJobDto {
+  description: String!
+  location: String!
+  status: String
+  teamMembers: [String!]
+  title: String!
+  type: String!
+}
+
+type DashboardAnalyticsResponse {
+  activeJobs: Int!
+  interviewsThisMonth: Int!
+  interviewsThisWeek: Int!
+  upcomingInterviews: [Meeting!]!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+input DeleteInterviewInput {
+  eventId: String!
+}
+
+type DeleteInterviewResponse {
+  message: String!
+  success: Boolean!
+}
+
+input GetInterviewsInput {
+  jobId: String!
+  limit: Int! = 10
+  page: Int! = 1
+}
+
+input GetTranscriptInput {
+  limit: Int! = 50
+  meetingId: String!
+  page: Int! = 1
+}
+
+type InterviewLog {
+  candidateEmail: String!
+  candidateName: String!
+  createdAt: DateTime!
+  id: ID!
+  job: Job!
+  jobId: String!
+  meeting: Meeting!
+  meetingId: String!
+  timezone: String!
+  updatedAt: DateTime!
+}
+
+type InterviewsResponse {
+  interviews: [Meeting!]!
+  limit: Int!
+  page: Int!
+  total: Int!
+  totalPages: Int!
+}
+
+type Job {
+  createdAt: DateTime!
+  createdBy: User!
+  createdById: String!
+  description: String!
+  id: ID!
+  location: String!
+  meetings: [Meeting!]!
+  organizationId: String!
+  status: String!
+  teamMembers: [JobTeamMember!]!
+  title: String!
+  type: String!
+  updatedAt: DateTime!
+}
+
+type JobTeamMember {
+  createdAt: DateTime!
+  id: ID!
+  job: Job!
+  jobId: ID!
+  updatedAt: DateTime!
+  user: User!
+  userId: ID!
+}
+
+type LoginResponse {
+  accessToken: String!
+  organization: OrganizationData
+  user: UserData!
+}
+
+type Meeting {
+  attendees: [MeetingAttendees!]!
+  communicationSkillsScore: Float
+  createdAt: DateTime!
+  cuemeetBotId: String
+  cultureFitScore: Float
+  endTime: String!
+  hasTranscription: Boolean!
+  id: String!
+  interviewLog: InterviewLog
+  isRecordingEnabled: Boolean!
+  job: Job!
+  meetLink: String!
+  meetingId: String!
+  meetingType: MeetingTypeEnum!
+  platform: MeetingPlatformEnum!
+  problemSolvingScore: Float
+  rrule: String
+  startTime: String!
+  status: MeetingStatusEnum!
+  technicalSkillsScore: Float
+  timeZone: String
+  title: String!
+  transcriptionSummary: String
+  updatedAt: DateTime!
+  user: User!
+}
+
+type MeetingAttendees {
+  createdAt: DateTime!
+  displayName: String!
+  email: String!
+  id: String!
+  meeting: Meeting!
+  meetingByICalUID: Meeting!
+  meetingICalUID: String!
+  meetingId: String!
+  updatedAt: DateTime!
+  user: User
+  userId: String
+}
+
+enum MeetingPlatformEnum {
+  GOOGLE_MEET
+  TEAMS
+  ZOOM
+}
+
+enum MeetingStatusEnum {
+  CREATED
+  DELETED
+  UPDATED
+}
+
+type MeetingTranscriptResponse {
+  attendees: [MeetingAttendees!]!
+  hasMore: Boolean!
+  limit: Int!
+  page: Int!
+  total: Int!
+  totalPages: Int!
+  transcript: [TranscriptSegment!]
+}
+
+enum MeetingTypeEnum {
+  NON_RECURRING
+  RECURRING
+}
+
+type Mutation {
+  addTeamMember(input: AddTeamMemberInput!): AddMemberResult!
+  createJob(input: CreateJobDto!, organizationId: ID!): Job!
+  deleteInterview(input: DeleteInterviewInput!): DeleteInterviewResponse!
+  loginWithGoogle(token: String!): LoginResponse!
+  logout: Boolean!
+  refreshToken: RefreshTokenResponse!
+  scheduleInterview(input: ScheduleInterviewInput!): Meeting!
+  updateInterview(input: UpdateInterviewInput!): Meeting!
+  updateOrganizationName(name: String!, organizationId: String!): Organization!
+}
+
+type Organization {
+  createdAt: DateTime!
+  cueMeetApiKey: String
+  cueMeetUserId: String
+  id: String!
+  isDemo: Boolean!
+  name: String!
+  timezone: String!
+  updatedAt: DateTime!
+}
+
+type OrganizationData {
+  id: String!
+  isDemo: Boolean!
+  name: String!
+  timezone: String!
+}
+
+type OrganizationMember {
+  createdAt: DateTime!
+  id: String!
+  role: String!
+  updatedAt: DateTime!
+  user: User!
+}
+
+type Query {
+  getDashboardAnalytics: DashboardAnalyticsResponse!
+  getInterviews(input: GetInterviewsInput!): InterviewsResponse!
+  getJob(jobId: ID!, organizationId: ID!): Job
+  getJobs(organizationId: ID!): [Job!]!
+  getMeetingTranscript(input: GetTranscriptInput!): MeetingTranscriptResponse!
+  getMyOrganization: Organization
+  getOrganizationMembers(organizationId: String!): [OrganizationMember!]!
+  me: User
+}
+
+type RefreshTokenResponse {
+  accessToken: String!
+}
+
+input ScheduleInterviewInput {
+  attendees: [String!]!
+  candidateEmail: String!
+  candidateName: String!
+  date: DateTime!
+  endTime: String!
+  jobId: String!
+  startTime: String!
+  timezone: String!
+  title: String!
+}
+
+type TranscriptSegment {
+  id: String!
+  speaker: String!
+  transcription_Data: String!
+  transcription_end_time_milliseconds: String!
+  transcription_start_time_milliseconds: String!
+}
+
+input UpdateInterviewInput {
+  attendees: [String!]
+  candidateEmail: String
+  candidateName: String
+  date: DateTime
+  endTime: String
+  eventId: String!
+  startTime: String
+  timezone: String
+  title: String
+}
+
+type User {
+  avatar: String
+  createdAt: DateTime!
+  email: String!
+  googleCalendarChannelId: String
+  googleCalendarResourceId: String
+  googleCalendarSyncToken: String
+  id: String!
+  name: String!
+  organizationMembers: [OrganizationMember!]!
+  sub: String
+  updatedAt: DateTime!
+}
+
+type UserData {
+  avatar: String!
+  email: String!
+  id: String!
+  name: String!
+}
