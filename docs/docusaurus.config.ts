@@ -10,15 +10,15 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://cuehire.com',
+  url: 'https://cuemeet.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/CueHire/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'cuehire', // Usually your GitHub org/user name.
-  projectName: 'cuehire', // Usually your repo name.
+  organizationName: 'CueMeet', // Usually your GitHub org/user name.
+  projectName: 'CueHire', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -39,8 +39,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/CueMeet/CueHire/tree/main/docs/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -59,6 +58,11 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        {
+          to: '/docs/intro',
+          label: 'Docs',
+          position: 'left',
+        },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
