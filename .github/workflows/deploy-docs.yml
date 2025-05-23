@@ -16,22 +16,28 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: 20
+          cache: 'yarn'
+          cache-dependency-path: './docs/yarn.lock'
 
       - name: Install yarn
         run: npm install -g yarn
         working-directory: ./docs
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
         working-directory: ./docs
 
       - name: Build site
-        run: yarn build
+        run: |
+          yarn build
+          touch ./build/.nojekyll
         working-directory: ./docs
 
       - name: Deploy to GitHub Pages
@@ -41,6 +47,7 @@ jobs:
           publish_dir: ./docs/build
           force_orphan: true
           commit_message: "Deploy documentation to GitHub Pages"
+          enable_jekyll: false
 
       - name: Create Release Tag
         run: |
