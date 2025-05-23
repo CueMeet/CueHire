@@ -1,43 +1,66 @@
-import type {ReactNode} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
-
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+export default function Home(): JSX.Element {
+  const { siteConfig } = useDocusaurusContext();
 
-export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      title="Welcome to CueHire Documentation"
+      description="Modern recruitment and hiring platform documentation">
+      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+        <div className="container">
+          <h1 className="hero__title">Welcome to CueHire</h1>
+          <p className="hero__subtitle">
+            A modern recruitment and hiring platform designed to streamline the interview and hiring process
+          </p>
+        </div>
+      </header>
+      <main className="container padding-vert--xl">
+        <div className="row">
+          <div className="col col--6">
+            <div className={clsx('card', styles.card)}>
+              <div className="card__header">
+                <h2>Introduction</h2>
+              </div>
+              <div className="card__body">
+                <p>
+                  Learn about CueHire's features, architecture, and how it can help streamline your recruitment process.
+                </p>
+              </div>
+              <div className="card__footer">
+                <Link
+                  className="button button--primary button--block"
+                  to="/docs/intro">
+                  Read Introduction →
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="col col--6">
+            <div className={clsx('card', styles.card)}>
+              <div className="card__header">
+                <h2>Installation Guide</h2>
+              </div>
+              <div className="card__body">
+                <p>
+                  Get started with CueHire by following our step-by-step installation and setup guide.
+                </p>
+              </div>
+              <div className="card__footer">
+                <Link
+                  className="button button--primary button--block"
+                  to="/docs/tutorial-basics/installation">
+                  Start Installation →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </Layout>
   );
