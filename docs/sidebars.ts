@@ -23,7 +23,27 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Getting Started',
       items: [
-        'tutorial-basics/installation',
+        {
+          type: 'doc',
+          id: 'tutorial-basics/installation',
+          label: 'Installation Overview',
+        },
+        {
+          type: 'category',
+          label: 'Installation Methods',
+          items: [
+            {
+              type: 'doc',
+              id: 'tutorial-basics/docker-installation',
+              label: 'Docker Installation',
+            },
+            {
+              type: 'doc',
+              id: 'tutorial-basics/direct-installation',
+              label: 'Direct Installation',
+            },
+          ],
+        },
       ],
     },
   ],

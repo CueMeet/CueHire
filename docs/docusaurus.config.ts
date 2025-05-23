@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'CueHire',
   tagline: 'AI-Powered Interviewing',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
 
   // Set the production url of your site here
   url: 'https://cuemeet.github.io',
@@ -54,8 +54,8 @@ const config: Config = {
     navbar: {
       title: 'CueHire',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'CueHire Logo',
+        src: 'img/logo.png',
       },
       items: [
         {
@@ -63,12 +63,12 @@ const config: Config = {
           label: 'Docs',
           position: 'left',
         },
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'tutorialSidebar',
+        //   position: 'left',
+        //   label: 'Tutorial',
+        // },
       ],
     },
     footer: {

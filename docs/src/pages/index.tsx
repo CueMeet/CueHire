@@ -22,7 +22,7 @@ export default function Home(): ReactNode {
       </header>
       <main className="container padding-vert--xl">
         <div className="row">
-          <div className="col col--6">
+          <div className="col col--4">
             <div className={clsx('card', styles.card)}>
               <div className="card__header">
                 <h2>Introduction</h2>
@@ -41,21 +41,61 @@ export default function Home(): ReactNode {
               </div>
             </div>
           </div>
-          <div className="col col--6">
+          <div className="col col--4">
             <div className={clsx('card', styles.card)}>
               <div className="card__header">
-                <h2>Installation Guide</h2>
+                <h2>Docker Installation</h2>
               </div>
               <div className="card__body">
                 <p>
-                  Get started with CueHire by following our step-by-step installation and setup guide.
+                  Get started quickly with our Docker-based installation, providing an isolated environment with all dependencies pre-configured.
                 </p>
               </div>
               <div className="card__footer">
                 <Link
                   className="button button--primary button--block"
+                  to="/docs/tutorial-basics/docker-installation">
+                  Docker Setup →
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="col col--4">
+            <div className={clsx('card', styles.card)}>
+              <div className="card__header">
+                <h2>Direct Installation</h2>
+              </div>
+              <div className="card__body">
+                <p>
+                  Set up CueHire directly on your machine for more control over individual service configurations.
+                </p>
+              </div>
+              <div className="card__footer">
+                <Link
+                  className="button button--primary button--block"
+                  to="/docs/tutorial-basics/direct-installation">
+                  Direct Setup →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row margin-top--lg">
+          <div className="col col--12">
+            <div className={clsx('card', styles.card)}>
+              <div className="card__header">
+                <h2>Installation Overview</h2>
+              </div>
+              <div className="card__body">
+                <p>
+                  Not sure which installation method to choose? Check our installation overview guide to help you decide.
+                </p>
+              </div>
+              <div className="card__footer">
+                <Link
+                  className="button button--secondary button--block"
                   to="/docs/tutorial-basics/installation">
-                  Start Installation →
+                  View Installation Overview →
                 </Link>
               </div>
             </div>
