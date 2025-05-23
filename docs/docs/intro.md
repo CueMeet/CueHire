@@ -43,10 +43,11 @@ CueHire consists of two main components:
 To get started with CueHire, you can:
 
 1. Check out the [Installation Guide](./tutorial-basics/installation)
+
 ## Development
 
-The project uses Docker for containerization, making it easy to set up and run locally. Check the [Development Guide](./tutorial-basics/development) for detailed instructions on setting up your development environment.
+The project uses Docker for containerization, making it easy to set up and run locally. For detailed instructions on setting up your development environment, please refer to the [Installation Guide](./tutorial-basics/installation).
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](./tutorial-extras/contributing) for more information on how to get involved.
+We welcome contributions! Please check back soon for our contributing guidelines.
