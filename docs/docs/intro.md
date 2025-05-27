@@ -23,7 +23,7 @@ CueHired is a comprehensive hiring platform that helps organizations manage thei
 CueHired consists of two main components:
 
 ### Backend (NestJS)
-- RESTful API architecture
+- GraphQL
 - Modular design with separate modules for:
   - Authentication
   - Organization Management

@@ -44,7 +44,7 @@ This directory contains the documentation website built using [Docusaurus](https
 
 To work with the documentation locally using Docker, you'll docker or compatible tool installed on your system.
 
-1. IBuild and start all services:
+1. Build and start all services:
 ```bash
 docker-compose up -d
 ```
