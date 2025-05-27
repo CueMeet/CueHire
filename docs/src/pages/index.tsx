@@ -10,11 +10,11 @@ export default function Home(): ReactNode {
 
   return (
     <Layout
-      title="Welcome to CueHire Documentation"
+      title="Welcome to CueHired Documentation"
       description="Modern recruitment and hiring platform documentation">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">Welcome to CueHire</h1>
+          <h1 className="hero__title">Welcome to CueHired</h1>
           <p className="hero__subtitle">
             A modern recruitment and hiring platform designed to streamline the interview and hiring process
           </p>
@@ -29,7 +29,7 @@ export default function Home(): ReactNode {
               </div>
               <div className="card__body">
                 <p>
-                  Learn about CueHire's features, architecture, and how it can help streamline your recruitment process.
+                  Learn about CueHired's features, architecture, and how it can help streamline your recruitment process.
                 </p>
               </div>
               <div className="card__footer">
@@ -67,7 +67,7 @@ export default function Home(): ReactNode {
               </div>
               <div className="card__body">
                 <p>
-                  Set up CueHire directly on your machine for more control over individual service configurations.
+                  Set up CueHired directly on your machine for more control over individual service configurations.
                 </p>
               </div>
               <div className="card__footer">

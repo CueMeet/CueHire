@@ -90,7 +90,7 @@ const OrganizationOnboarding = () => {
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle className="text-2xl text-center">
-            {step === 1 ? 'Welcome to CueHire!' : 'Add Team Member'}
+            {step === 1 ? 'Welcome to CueHired!' : 'Add Team Member'}
           </CardTitle>
           <CardDescription className="text-center">
             {step === 1 

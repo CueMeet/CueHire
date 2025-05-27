@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Introduction
 
-Welcome to CueHire Documentation! CueHire is a modern recruitment and hiring platform designed to streamline the interview and hiring process.
+Welcome to CueHired Documentation! CueHired is a modern recruitment and hiring platform designed to streamline the interview and hiring process.
 
-## What is CueHire?
+## What is CueHired?
 
-CueHire is a comprehensive hiring platform that helps organizations manage their recruitment process efficiently. It provides features for job posting, candidate management, interview scheduling, and organization management.
+CueHired is a comprehensive hiring platform that helps organizations manage their recruitment process efficiently. It provides features for job posting, candidate management, interview scheduling, and organization management.
 
 ## Key Features
 
@@ -20,7 +20,7 @@ CueHire is a comprehensive hiring platform that helps organizations manage their
 
 ## System Architecture
 
-CueHire consists of two main components:
+CueHired consists of two main components:
 
 ### Backend (NestJS)
 - RESTful API architecture
@@ -40,7 +40,7 @@ CueHire consists of two main components:
 
 ## Getting Started
 
-To get started with CueHire, you can:
+To get started with CueHired, you can:
 
 1. Check out the [Installation Guide](./tutorial-basics/installation)
 

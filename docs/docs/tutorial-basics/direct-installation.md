@@ -4,7 +4,12 @@ sidebar_position: 3
 
 # Direct Installation Guide
 
-This guide will help you set up CueHire directly on your local machine for development without using Docker.
+This guide will help you set up CueHired directly on your local machine for development without using Docker.
+
+## CueMeet Setup
+
+Before proceeding with CueHired installation, you'll need to set up CueMeet first. Please follow the [CueMeet local setup guide](https://cuemeet.github.io/cuemeet-documentation/docs/local-setup) to install and configure CueMeet on your system.
+
 
 ## Prerequisites
 
@@ -23,6 +28,54 @@ git clone <repository-url>
 cd cuemeet/Apps/CueHire
 ```
 
+### Project Folder Structure
+
+<details>
+<summary>Click to expand folder structure</summary>
+```
+.
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── SECURITY.md
+├── UPGRADE.md
+├── .github/
+├── backend/
+│   ├── Dockerfile
+│   ├── README.md
+│   ├── dist/
+│   ├── nest-cli.json
+│   ├── package.json
+│   ├── src/
+│   ├── test/
+│   ├── tsconfig.build.json
+│   ├── tsconfig.json
+│   └── yarn.lock
+├── docs/
+├── docker-compose.yml
+├── frontend/
+│   ├── Dockerfile
+│   ├── README.md
+│   ├── dist/
+│   ├── public/
+│   ├── src/
+│   ├── index.html
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.node.json
+│   ├── vite.config.ts
+│   ├── tailwind.config.ts
+│   ├── postcss.config.js
+│   ├── components.json
+│   └── yarn.lock
+└── assets
+    ├── banner.png
+    └── cuemeet-logo.png
+```
+</details>
+
 ## Backend Setup
 
 1. Navigate to the backend directory:
@@ -36,11 +89,10 @@ yarn install
 ```
 
 3. Set up environment variables:
-```bash
-cp .env.example .env
-```
 
-Here's the required environment variables format for the backend:
+<details>
+<summary>Click to view/copy Backend API .env configuration</summary>
+
 ```env
 NODE_ENV=
 PORT=
@@ -67,8 +119,8 @@ CUEMEET_BASE_URL=
 
 GEMINI_API_KEY=
 ```
-
-Edit the `.env` file with your configuration.
+⚠️ Important: The CueMeet-related environment variables must be obtained from the CueMeet Setup Guide. Complete the CueMeet setup first and copy the relevant values into this file.
+</details>
 
 4. Start the development server:
 ```bash
@@ -88,17 +140,14 @@ yarn install
 ```
 
 3. Set up environment variables:
-```bash
-cp .env.example .env
-```
+<details>
+<summary>Click to view/copy Frontend .env configuration</summary>
 
-Here's the required environment variables format for the frontend:
 ```env
 VITE_GOOGLE_AUTH_URL=
 VITE_GRAPHQL_URL=
 ```
-
-Edit the `.env` file with your configuration.
+</details>
 
 4. Start the development server:
 ```bash

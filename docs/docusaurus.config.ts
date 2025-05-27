@@ -5,12 +5,12 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'CueHire',
+  title: 'CueHired',
   tagline: 'AI-Powered Interviewing',
   favicon: 'img/logo.png',
 
   // Set the production url of your site here
-  url: 'https://cuemeet.github.io',
+  url: 'https://cuehired.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/CueHire/',
@@ -18,7 +18,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'CueMeet', // Usually your GitHub org/user name.
-  projectName: 'CueHire', // Usually your repo name.
+  projectName: 'CueHired', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -52,9 +52,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'CueHire',
+      title: 'CueHired',
       logo: {
-        alt: 'CueHire Logo',
+        alt: 'CueHired Logo',
         src: 'img/logo.png',
       },
       items: [

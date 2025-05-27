@@ -1,118 +1,162 @@
-# CueHire Application
+<div align="center">
+  <img src="https://i.postimg.cc/FRLZLSSF/Banner.png" alt="Meeting Bots Control Panel Banner" />
+  <h1>CueMeet Documentation</h1>
+</div>
 
-CueHire is a full-stack application built with modern technologies, featuring a React frontend and NestJS backend, containerized with Docker.
+---
+## Links to CueMeet Repositories
 
-## Tech Stack
+You can explore all our repositories for additional tools and integrations:
 
-### Frontend
-- React with TypeScript
-- Vite as build tool
-- Tailwind CSS for styling
-- Node.js environment
+<ul>
+  <li><a href="https://github.com/CueMeet/cuemeet-documentation" target="_blank">CueMeet Docs</a></li>
+  <li><a href="https://github.com/CueMeet/Meeting-Bots-Control-Panel" target="_blank">CueMeet Control Panel</a></li>
+  <li><a href="https://github.com/CueMeet/cuemeet-google-bot" target="_blank">Google Meet Bot</a></li>
+  <li><a href="https://github.com/CueMeet/cuemeet-teams-bot" target="_blank">Ms Teams Bot</a></li>
+  <li><a href="https://github.com/CueMeet/cuemeet-zoom-bot" target="_blank">Zoom Meet Bot</a></li>
+</ul>
 
-### Backend
-- NestJS (Node.js framework)
-- TypeScript
-- PostgreSQL database
-- Redis for caching
-- Google OAuth integration
+---
 
-### Infrastructure
-- Docker and Docker Compose for containerization
-- PostgreSQL 15 (Alpine)
-- Redis 7 (Alpine)
+[![License](https://img.shields.io/badge/license-GPL%203.0-blue.svg)](LICENSE)
+[![Docusaurus](https://img.shields.io/badge/Docusaurus-3.7.0-blue)](https://docusaurus.io/)
+[![Node.js](https://img.shields.io/badge/Node.js-20.11.0-green)](https://nodejs.org/)
+[![Docker](https://img.shields.io/badge/Docker-Available-blue)](https://www.docker.com/)
+[![OpenAPI](https://img.shields.io/badge/OpenAPI-4.3.4-orange)](https://www.openapis.org/)
+[![React](https://img.shields.io/badge/React-19.0.0-blue)](https://reactjs.org/)
+[![Yarn](https://img.shields.io/badge/Yarn-Package%20Manager-blue)](https://yarnpkg.com/)
+[![Community](https://img.shields.io/badge/Community-Supported-green)](SUPPORT.md)
 
-## Prerequisites
+This directory contains the documentation website built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-Before running the application, ensure you have the following installed:
-- [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose](https://docs.docker.com/compose/install/)
-- [Node.js](https://nodejs.org/) (v16 or higher)
-- [Yarn](https://yarnpkg.com/) or npm
+<div align="center">
+  <img src="https://i.postimg.cc/FRLZLSSF/Banner.png" alt="Meeting Bots Control Panel Banner" />
+  <h1>CueHired Documentation</h1>
+  <p>CueHired is a comprehensive hiring platform that helps organizations manage their recruitment process efficiently. It provides features for job posting, candidate management, interview scheduling, and organization management.</p>
+</div>
 
-## Environment Setup
 
-1. Clone the repository:
+## Key Features
+Authentication & Authorization: Secure user authentication and role-based access control
+Organization Management: Manage company profiles and team structures
+Job Management: Create, manage, and track job postings
+Interview Management: Schedule and conduct interviews with candidates
+Modern Tech Stack: Built with NestJS (Backend) and React (Frontend)
+
+## Getting Started
+
+To work with the documentation locally using Docker, you'll docker or compatible tool installed on your system.
+
+1. IBuild and start all services:
 ```bash
-git clone <repository-url>
-cd cuemeet/Apps/CueHire
+docker-compose up -d
 ```
-
-2. Set up environment variables:
-   - Create a `.env` file in the backend directory with the following variables:
-     ```
-     GOOGLE_CLIENT_ID=your_google_client_id
-     GOOGLE_CLIENT_SECRET=your_google_client_secret
-     ```
-   - Note: Other environment variables are already configured in docker-compose.yml
-
-## Running the Application
-
-### Using Docker (Recommended)
-
-1. Build and start all services:
-```bash
-docker-compose up --build
-```
-
-This will start:
-- Frontend on http://localhost:3000
-- Backend on http://localhost:8080
-- PostgreSQL on port 5433
-- Redis on port 6379
-
-2. To stop all services:
+2. Stop all services:
 ```bash
 docker-compose down
 ```
 
-### Manual Development Setup
 
-#### Frontend
+To work with the documentation locally, you'll need Node.js installed on your system.
+
+1. Install dependencies:
 ```bash
-cd frontend
 yarn install
-yarn dev
 ```
 
-#### Backend
+2. Start the development server:
 ```bash
-cd backend
-yarn install
-yarn start:dev
+yarn start
 ```
 
-## Development
-
-- Frontend development server runs on http://localhost:3000
-- Backend API is available at http://localhost:8080
-- API documentation is available at http://localhost:8080/api/docs (when running)
-
-## Database
-
-- PostgreSQL is accessible on port 5433
-- Default credentials:
-  - Username: postgres
-  - Password: postgres
-  - Database: cue-calender
-
-## Redis
-
-- Redis is accessible on port 6379
-- Used for caching and session management
+This will start a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
 
 ## Available Scripts
 
-### Frontend
-- `yarn dev` - Start development server
-- `yarn build` - Build for production
-- `yarn preview` - Preview production build
-- `yarn lint` - Run ESLint
-- `yarn test` - Run tests
+- `npm start` - Start the development server
+- `npm run build` - Build the static website
+- `npm run serve` - Serve the built website locally
+- `npm run deploy` - Deploy the site to production
+- `npm run clear` - Clear the local build cache
 
-### Backend
-- `yarn start:dev` - Start development server
-- `yarn build` - Build for production
-- `yarn start:prod` - Start production server
-- `yarn test` - Run tests
-- `yarn lint` - Run ESLint
+## Project Structure
+
+```
+backend/
+├── src/                    # Source code
+│   ├── modules/           # Feature modules
+│   ├── database/          # Database configurations and migrations
+│   ├── decorators/        # Custom decorators
+│   ├── guards/            # Authentication and authorization guards
+│   ├── providers/         # Service providers
+│   ├── processors/        # Background processors
+│   ├── schedulers/        # Scheduled tasks
+│   ├── utils/             # Utility functions
+│   ├── constants/         # Application constants
+│   ├── app.module.ts      # Root application module
+│   └── main.ts           # Application entry point
+├── test/                  # Test files
+├── Dockerfile            # Docker configuration
+├── package.json          # Dependencies and scripts
+├── tsconfig.json         # TypeScript configuration
+└── nest-cli.json         # NestJS CLI configuration
+```
+
+```
+frontend/
+├── src/                   # Source code
+│   ├── components/        # Reusable UI components
+│   ├── pages/            # Page components
+│   ├── routes/           # Route definitions
+│   ├── store/            # State management
+│   ├── hooks/            # Custom React hooks
+│   ├── utils/            # Utility functions
+│   ├── lib/              # Library configurations
+│   ├── graphql/          # GraphQL queries and mutations
+│   ├── App.tsx           # Root component
+│   └── main.tsx          # Application entry point
+├── public/               # Static assets
+├── Dockerfile           # Docker configuration
+├── package.json         # Dependencies and scripts
+├── tsconfig.json        # TypeScript configuration
+├── vite.config.ts       # Vite configuration
+└── tailwind.config.ts   # Tailwind CSS configuration
+```
+
+## 📚 Documentation
+
+Detailed documentation is available in the [docs](https://cuemeet.github.io/CueHired/) directory:
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](./CONTRIBUTING.md) for details.
+
+---
+
+## 🔐 Security
+
+Please refer to [SECURITY.md](./SECURITY.md) for information about reporting security vulnerabilities and best practices.
+
+---
+
+## 🆙 Upgrading
+
+For version compatibility and migration steps, see [UPGRADE.md](./UPGRADE.md).
+
+---
+
+## 📜 Code of Conduct
+
+We follow a standard of respectful communication and collaboration. Please review our [Code of Conduct](./CODE_OF_CONDUCT.md) before contributing.
+
+---
+
+## 📝 License
+
+This project is licensed under the [GNU General Public License v3.0 (GPL-3.0)](LICENSE)  — see the LICENSE file for details.
+
+<div align="center">
+  Made with ❤️ by CueCard.ai team
+</div>

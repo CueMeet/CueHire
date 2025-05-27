@@ -12,7 +12,7 @@ const LogIn = () => {
     <div className="flex justify-center items-center min-h-screen bg-background">
       <Card className="w-full max-w-md mx-4 shadow-lg">
         <CardHeader className="space-y-2 text-center">
-          <CardTitle className="text-2xl font-bold">Welcome to CueHire</CardTitle>
+          <CardTitle className="text-2xl font-bold">Welcome to CueHired</CardTitle>
           <CardDescription className="text-muted-foreground">
             Sign in to access your account
           </CardDescription>

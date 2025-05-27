@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="container h-full mx-auto flex items-center justify-between px-6">
         <div className="flex items-center gap-10">
           <Link to="/" className="flex items-center">
-            <div className="font-extrabold text-2xl tracking-tight">CueHire</div>
+            <div className="font-extrabold text-2xl tracking-tight">CueHired</div>
           </Link>
           
           <nav className="hidden md:flex items-center space-x-6 text-sm">

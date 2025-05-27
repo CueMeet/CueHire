@@ -101,7 +101,7 @@ export class CalendarEventsScheduler {
           // Create bot using CueMeet service with organization's API key
           const meetingBot = await this.cueMeetService.createBot(
             cueMeetApiKey,
-            `CueHire Assistant`,
+            `CueHired Assistant`,
             meeting.meetLink,
           );
 
