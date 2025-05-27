@@ -1,6 +1,5 @@
 <div align="center">
   <img src="https://i.postimg.cc/FRLZLSSF/Banner.png" alt="Meeting Bots Control Panel Banner" />
-  <h1>CueMeet Documentation</h1>
 </div>
 
 ---
@@ -30,7 +29,6 @@ You can explore all our repositories for additional tools and integrations:
 This directory contains the documentation website built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 <div align="center">
-  <img src="https://i.postimg.cc/FRLZLSSF/Banner.png" alt="Meeting Bots Control Panel Banner" />
   <h1>CueHired Documentation</h1>
   <p>CueHired is a comprehensive hiring platform that helps organizations manage their recruitment process efficiently. It provides features for job posting, candidate management, interview scheduling, and organization management.</p>
 </div>
