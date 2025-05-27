@@ -2,7 +2,7 @@
 
 Thank you for taking the time to contribute! Please follow these guidelines to ensure a smooth and productive workflow. 🚀🚀🚀
 
-To get started with the project, please refer to the [documentaton](https://cuemeet.github.io/CueHired/) for detailed instructions.
+To get started with the project, please refer to the [documentaton](https://cuemeet.github.io/CueHire/) for detailed instructions.
 
 ## Creating an Issue
 
