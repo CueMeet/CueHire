@@ -35,11 +35,10 @@ This directory contains the documentation website built using [Docusaurus](https
 
 
 ## Key Features
-Authentication & Authorization: Secure user authentication and role-based access control
-Organization Management: Manage company profiles and team structures
-Job Management: Create, manage, and track job postings
-Interview Management: Schedule and conduct interviews with candidates
-Modern Tech Stack: Built with NestJS (Backend) and React (Frontend)
+- Authentication & Authorization: Secure user authentication and role-based access control
+- Organization Management: Manage company profiles and team structures
+- Job Management: Create, manage, and track job postings
+- Interview Management: Schedule and conduct interviews with candidates
 
 ## Getting Started
 
