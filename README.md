@@ -122,7 +122,7 @@ frontend/
 
 ## 📚 Documentation
 
-Detailed documentation is available in the [docs](https://cuemeet.github.io/CueHired/) directory:
+Detailed documentation is available in the [docs](https://cuemeet.github.io/CueHire/) directory:
 
 ---
 
